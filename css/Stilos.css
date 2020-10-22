@@ -45,8 +45,14 @@
     
 }
 
-.btn-success{
+.productos .btn-success{
     background-color: #f7be16!important;
+}
+.carritos{
+    position: relative;
+    height: auto;
+    max-height: 30vh;
+    overflow-y: auto;
 }
 
 .footer{
