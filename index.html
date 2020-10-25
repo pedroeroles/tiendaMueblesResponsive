@@ -145,9 +145,9 @@
  <small class="text-muted text-center mx-auto" v-if="cantidadCarritos()===0">productos seleccionados</small>
     <ul class="list-group d-flex align-items-center overflow-auto">
       <li class="list-group-item w-100" v-for="(carrito, indice) in cart">
-        <span class="text-left">{{carrito.nombre}} - {{carrito.precio}}</span>
+          <span class="text-left align-items-center" :class = "['alert',carrito.estado ? 'alert-success': 'alert-danger']">{{carrito.nombre}} - {{carrito.precio}}</span>
         <div class="float-right d-inline">
-          <button class="btn btn-success text-right">validar</button>
+          <button class="btn btn-success text-right" @click=editarTarea(indice)>validar</button>
         <button class="btn btn-danger text-right" @click=borrarCarrito(indice)>X</button>
         </div>
       </li> 
@@ -155,6 +155,7 @@
   </div>
 </div>
 </div>
+
 
     <footer class="container-fluid footer text-center pt-4 pb-4">
           <div class="row">
